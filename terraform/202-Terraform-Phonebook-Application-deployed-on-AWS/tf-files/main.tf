@@ -4,12 +4,8 @@ data "aws_vpc" "selected" {
 
 data "aws_subnets" "pb-subnets" {
   filter {
-    name = "vpc-id"
-    values = [data.aws_vpc.selected.id]
-  }
-    filter {
-    name = "tag:Name"
-    values = ["default*"]
+    name   = "default-for-az"
+    values = ["true"]
   }
 }
 
@@ -107,7 +103,7 @@ resource "aws_db_instance" "db-server" {
   engine = "mysql"
   engine_version = "8.0.28"
   username = "admin"
-  password = "Oliver_1"
+  password = "latiko"
   monitoring_interval = 0
   multi_az = false
   port = 3306

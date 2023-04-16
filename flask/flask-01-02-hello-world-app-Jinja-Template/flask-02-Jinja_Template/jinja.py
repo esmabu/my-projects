@@ -2,9 +2,9 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-@app.route('/')
-def head():
-    return render_template('index.html', number1 = 117000, number2 = 229000)
+# @app.route('/')
+# def head():
+#     return render_template('index.html', number1 = 117000, number2 = 229000)
 
 @app.route('/sum')
 def number():

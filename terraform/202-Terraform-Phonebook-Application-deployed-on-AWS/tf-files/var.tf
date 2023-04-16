@@ -1,13 +1,13 @@
-variable "git-name" {
+variable "esmabu" {
   default = "james-clarusway"
 }
 
 variable "git-token" {
-  default = "xxxxxxxxxxxxxxx"
+  default = "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"
 }
 
 variable "key-name" {
-  default = "clarus"
+  default = "my-key"
 }
 
 variable "hosted-zone" {
